@@ -1,0 +1,39 @@
+<html>
+<head> 
+	<meta charset="utf-8" />
+	<script src="heartbeat.js"> </script>
+	<script>
+
+
+	actionsAfterBeat = function(){
+
+		document.body.insertAdjacentHTML("beforeend", "<li>❤️</li>");
+
+	}
+	actionsAfterBreak = function(){
+
+		document.body.insertAdjacentHTML("beforeend", "<li>💔</li>");
+
+	}	
+	 
+
+
+	hb = new heartbeat("testheartbeat.php", 2500, 400, actionsAfterBeat,actionsAfterBreak, false)
+ 
+ 
+	
+
+	</script>
+
+
+</head> 
+
+<body id ="bod">
+
+<div id="start" onclick="hb.start();" style="font-size:4em; position:fixed; top:38%; left:42%">START</div>
+
+<div id="stop"  onclick="hb.stop();"  style="font-size:4em; position:fixed; top:54%; left:42%">STOP</div>
+</body>
+
+
+</html>
