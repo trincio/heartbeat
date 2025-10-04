@@ -34,13 +34,17 @@ class heartbeat{
 	}
 
 
-	stop = function(flag_show){
-		if (this.started)
-		{
-			console.log ("🛑 heartbeat - STOPPED. 🛑");
-			this.started = false;
- 		}
-	}
+        stop = function(flag_show){
+                if (this.started)
+                {
+                        if (this.currenttimeoutID !== null) {
+                                clearTimeout(this.currenttimeoutID);
+                                this.currenttimeoutID = null;
+                        }
+                        console.log ("🛑 heartbeat - STOPPED. 🛑");
+                        this.started = false;
+                }
+        }
 
 	
 	beat = function(flag_show){
