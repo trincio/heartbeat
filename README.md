@@ -6,3 +6,4 @@ Simply uses the setTimeout for testing a remote document availability via XMLHtt
 
 ## Syntax?
 heartbeat is self explanatory for any junior developer, please take a look to the example.
+
